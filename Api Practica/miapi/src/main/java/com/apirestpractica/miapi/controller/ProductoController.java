@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/api/productos")
 public class ProductoController {
     @GetMapping
-    public String listaDeProductos() {
+    public String listaProductos() {
         return "Listando todos los productos";
     }
     @GetMapping("/{id}")
@@ -36,16 +36,16 @@ public class ProductoController {
     
     @GetMapping("/buscar")
     public String buscarProductos(
-        @RequestParam String termino,
+        @RequestParam String terminoBuscado,
         @RequestParam(defaultValue = "nombre") String ordenadoPor,
         @RequestParam(defaultValue = "asc")String orden,
         @RequestParam(defaultValue = "10") int limite
     ) {
         return "Busqueda de productos con: "+
-                "termino = "+ termino + "'"+
-                ", ordenados por = " + ordenadoPor+
-                ", orden = "+ orden +
-                ", limite de resultados = " + limite
+                "termino = "+ terminoBuscado + "/"+
+                " ordenados por = " + ordenadoPor+
+                "/ orden = "+ orden +
+                "/ limite de resultados = " + limite + "/"
                 ;
     }
     

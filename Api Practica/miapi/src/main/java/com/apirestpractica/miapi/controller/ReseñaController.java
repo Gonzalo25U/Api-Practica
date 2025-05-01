@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 @RequestMapping("/api")
 public class ReseñaController {
     @GetMapping("/productos/{productoId}/reseñas")
-    public String listarReseñasDeProducto(
+    public String listarReseñasProducto(
         @PathVariable long productoId,
         @RequestParam(defaultValue = "1") int calificacionMin,
         @RequestParam(defaultValue = "5") int calificacionMax,

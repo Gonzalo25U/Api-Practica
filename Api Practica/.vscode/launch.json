@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-MiapiApplication<miapi>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.apirestpractica.miapi.MiapiApplication",
+            "projectName": "miapi",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
